@@ -30,34 +30,34 @@ public final class Fraction {
 
     public Fraction add(Fraction other) {
         // TODO: Phương thức cộng hai phân số (this và other), trả về đối tượng Fraction mới
-        Fraction add = new Fraction(0,1); // khởi tạo đối tượng để trả về phép cộng
+        Fraction add = new Fraction(0,1); 
         
-        int a = this.getDenominator(); // lấy giá trị của mẫu this
+        int a = this.getDenominator(); 
         
-        int n = this.getNumerator()* other.getDenominator(); //tử this nhân mẫu other
+        int n = this.getNumerator()* other.getDenominator(); 
         
-        int d = a*other.getDenominator(); //mẫu số chung
+        int d = a*other.getDenominator(); 
         
-        add.setNumerator(n + a*other.getNumerator()); //cộng tử vs tử
+        add.setNumerator(n + a*other.getNumerator()); 
         
-        add.setDenominator(d);    //mẫu số chung 
+        add.setDenominator(d);    
         
         return add;
     }
 
     public Fraction subtract(Fraction other) {
         // TODO: Phương thức trừ hai phân số (this và other), trả về đối tượng Fraction mới
-        Fraction sub = new Fraction(0,1); // khởi tạo đối tượng để trả về phép trừ
+        Fraction sub = new Fraction(0,1); 
         
-        int a = this.getDenominator(); // lấy giá trị của mẫu this
+        int a = this.getDenominator(); 
         
-        int n = this.getNumerator()* other.getDenominator(); //tử this nhân mẫu other
+        int n = this.getNumerator()* other.getDenominator(); 
         
-        int d = a* other.getDenominator(); //mẫu số chung
+        int d = a* other.getDenominator(); 
         
-        sub.setNumerator(n - a*other.getNumerator()); //trừ tử vs tử
+        sub.setNumerator(n - a*other.getNumerator()); 
         
-        sub.setDenominator(d);    //mẫu số chung
+        sub.setDenominator(d);   
         
         return sub;
     }
@@ -65,9 +65,9 @@ public final class Fraction {
     public Fraction multiply(Fraction other) {
         // TODO: Phương thức nhân hai phân số (this và other), trả về đối tượng Fraction mới
         
-        Fraction mul = new Fraction(0,1); // khởi tạo đối tượng để trả về phép nhân
+        Fraction mul = new Fraction(0,1); 
         
-        mul.setNumerator(this.getNumerator()*other.getNumerator()); // nhân tử vs tử
+        mul.setNumerator(this.getNumerator()*other.getNumerator()); 
         
         mul.setDenominator(this.getDenominator()*other.getDenominator());
         
@@ -76,11 +76,11 @@ public final class Fraction {
 
     public Fraction divide(Fraction other) {
         // TODO: Phương thức chia hai phân số (this và other), trả về đối tượng Fraction mới
-        Fraction div = new Fraction(0,1); // khởi tạo đối tượng để trả về phép chia
+        Fraction div = new Fraction(0,1); 
         
-        div.setNumerator(this.getNumerator()*other.getDenominator()); // nhân tử vs mẫu
+        div.setNumerator(this.getNumerator()*other.getDenominator()); 
         
-        div.setDenominator(this.getDenominator()*other.getNumerator()); // nhân mẫu với tử
+        div.setDenominator(this.getDenominator()*other.getNumerator()); 
         
         return div;
     }
@@ -93,7 +93,7 @@ public final class Fraction {
     public boolean equals(Object other) {
         Fraction a =(Fraction)other;
         boolean check = false;
-        if( (this.getNumerator()*a.getDenominator()) == (this.getDenominator() * a.getNumerator() )) check = true; 
+        if( this.getNumerator()*a.getDenominator()) - (this.getDenominator() * a.getNumerator() == 0) check = true; 
         return check;
     }
 }
