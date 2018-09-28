@@ -84,16 +84,11 @@ public final class Fraction {
         
         return div;
     }
-    
-    /**
-     * 
-     * @return 
-     */
 
     public boolean equals(Object other) {
         Fraction a =(Fraction)other;
         boolean check = false;
-        if( this.getNumerator()*a.getDenominator()) - (this.getDenominator() * a.getNumerator() == 0) check = true; 
+        if( this.getNumerator()*a.getDenominator()) == (this.getDenominator() * a.getNumerator()) check = true; 
         return check;
     }
 }
